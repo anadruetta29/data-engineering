@@ -1,0 +1,11 @@
+sale_id,product_id,user_id,quantity,price,sale_date,country
+sale_001,prod_01,user_01,2,60.25,2024-01-10,Argentina
+sale_002,prod_02,user_02,1,75.00,2024-01-10,Argentina
+sale_003,prod_03,user_03,3,70.00,2024-01-11,Chile
+sale_004,prod_01,user_04,1,60.25,2024-01-11,Uruguay
+sale_005,prod_04,user_01,2,120.00,2024-01-12,Argentina
+sale_006,prod_02,user_05,1,75.00,2024-01-12,Brasil
+sale_007,prod_03,user_06,4,70.00,2024-01-13,Chile
+sale_008,prod_05,user_07,1,200.00,2024-01-13,Argentina
+sale_009,prod_01,user_02,3,60.25,2024-01-14,Uruguay
+sale_010,prod_04,user_08,1,120.00,2024-01-14,Brasil
