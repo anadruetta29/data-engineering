@@ -1,10 +1,8 @@
 from extract.extract_sales import extract_sales
 from extract.extract_payments import extract_payments
-
 from transform.clean_sales import clean_sales
 from transform.clean_payments import clean_payments
 from transform.join_sales_payments import join_sales_payments
-
 from load.load_to_postgres import load_to_postgres
 
 def run_pipeline():
