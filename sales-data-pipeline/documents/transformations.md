@@ -3,7 +3,8 @@ Remove Duplicates: Ensure there are no repeated records (especially for sale_id 
 
 Validate Nulls: Handle or remove missing values in critical fields like price, user_id, or status.
 
-Convert Data Types: Ensure dates are in datetime format and financial values (price, amount) are numeric/float.
+Convert Data Types: Ensure dates are in datetime format and financial values (price, amount) 
+are numeric/float.
 
 ## Business Rules
 Paid Status Only: Filter for records where status = 'PAID'.
