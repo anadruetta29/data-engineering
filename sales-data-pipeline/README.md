@@ -42,3 +42,17 @@ Tecnologías utilizadas
 - PostgreSQL
 - Git
 - Power BI (visualización)
+
+Notas
+- Arquitectura en capas: Los datos pasan por capas raw, staging y processed para garantizar trazabilidad,
+calidad y separación entre limpieza y reglas de negocio.
+
+- Separación de responsabilidades: Separé la limpieza por fuente, las reglas de negocio inter-fuente y la 
+carga final, lo que permite un pipeline modular y escalable.
+
+- Limpieza de datos: Apliqué validaciones básicas de calidad de datos antes de cualquier análisis.
+
+- Reglas de negocio: Las reglas de negocio se aplican en la etapa de transformación para 
+garantizar métricas consistentes.
+
+- Estrategia de carga: La fase de load consiste en una carga batch diaria hacia PostgreSQL.
