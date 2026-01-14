@@ -1,17 +1,3 @@
--- =====================================================
--- Table: users
--- Description: Used for analysis
--- =====================================================
-
-DROP TABLE IF EXISTS users;
-
-CREATE TABLE users (
-    user_id TEXT PRIMARY KEY,
-    email TEXT,
-    country TEXT,
-    signup_date DATE,
-    is_active BOOLEAN
-);
 
 -- =====================================================
 -- Seed data (fictitious users)
