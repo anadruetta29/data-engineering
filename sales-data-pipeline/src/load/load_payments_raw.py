@@ -13,27 +13,28 @@ DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
 DB_URL = f"postgresql://{quote_plus(DB_USER)}:{quote_plus(DB_PASSWORD)}@{DB_HOST}:{DB_PORT}/{DB_NAME}?client_encoding=utf8"
-
 engine = create_engine(DB_URL)
 
 
-def load_to_postgres(df: pd.DataFrame, table_name: str):
+def load_payments_raw(df: pd.DataFrame):
+
     if df.empty:
-        print("No data to load.")
+        print("No payments to load.")
         return
 
     for col in df.select_dtypes(include="object").columns:
         df[col] = df[col].astype(str).str.encode('utf-8', errors='ignore').str.decode('utf-8')
 
-    sale_dates = df["sale_date"].dt.date.unique().tolist()
-
     with engine.begin() as connection:
-        delete_query = text(f"""
-            DELETE FROM {table_name}
-            WHERE sale_date = ANY(:sale_dates)
-        """)
-        connection.execute(delete_query, {"sale_dates": sale_dates})
+        if "payment_date" in df.columns:
+            payment_dates = pd.to_datetime(df["payment_date"]).dt.date.unique().tolist()
+            delete_query = text("""
+                DELETE FROM payments_raw
+                WHERE payment_date = ANY(:payment_dates)
+            """)
+            connection.execute(delete_query, {"payment_dates": payment_dates})
 
-        df.to_sql(table_name, connection, if_exists="append", index=False)
+        df.to_sql("payments_raw", connection, if_exists="append", index=False)
 
-    print(f"Loaded {len(df)} records into {table_name}")
+    print(f"Loaded {len(df)} records into payments_raw")
+
