@@ -56,3 +56,9 @@ carga final, lo que permite un pipeline modular y escalable.
 garantizar métricas consistentes.
 
 - Estrategia de carga: La fase de load consiste en una carga batch diaria hacia PostgreSQL.
+
+Ejecución
+1. Crear base de datos
+2. Crear tablas
+3. Ejecutar los scripts de extract
+4. Ejecutar los scripts de transform 

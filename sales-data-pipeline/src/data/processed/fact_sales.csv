@@ -1,0 +1,9 @@
+sale_id,product_id,user_id,sale_date,country,payment_status,payment_method,total_amount
+sale_001,prod_01,user_01,2024-01-10,Argentina,approved,credit_card,120.5
+sale_002,prod_02,user_02,2024-01-10,Argentina,approved,debit_card,75.0
+sale_003,prod_03,user_03,2024-01-11,Chile,approved,paypal,210.0
+sale_005,prod_04,user_01,2024-01-12,Argentina,approved,bank_transfer,240.0
+sale_007,prod_03,user_06,2024-01-13,Chile,approved,debit_card,280.0
+sale_008,prod_05,user_07,2024-01-13,Argentina,approved,credit_card,200.0
+sale_009,prod_01,user_02,2024-01-14,Uruguay,approved,paypal,180.75
+sale_010,prod_04,user_08,2024-01-14,Brasil,approved,bank_transfer,120.0
