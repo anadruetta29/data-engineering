@@ -1,16 +1,16 @@
 @startuml
+title Star Schema: Sales Data Warehouse
 
-title Star Schema: Sales Entity-Relationship Diagram
-
-entity "Customer" {
-  * customer_id : PK
-  --
-  name : VARCHAR
-  country : VARCHAR
-  segment : VARCHAR
+entity "users" {
+    * user_id : PK
+    --
+    email : VARCHAR
+    country : VARCHAR
+    signup_date_id : FK
+    is_active : BOOLEAN
 }
 
-entity "Product" {
+entity "products" {
   * product_id : PK
   --
   product_name : VARCHAR
@@ -18,7 +18,7 @@ entity "Product" {
   price : DECIMAL
 }
 
-entity "Time" {
+entity "time" {
   * time_id : PK
   --
   date : DATE
@@ -27,31 +27,21 @@ entity "Time" {
   day : INTEGER
 }
 
-entity "Users" {
-    * user_id : PK
-    --
-    email : STRING
-    country : STRING
-    signup_date_id : FK
-    is_active : BOOLEAN
-}
-
-entity "FactSales" {
+entity "fact_sales" {
   * sale_id : PK
   --
-  * product_id : FK
-  * user_id : FK
-  * time_id : FK
-  country : VARCHAR
+  user_id : FK
+  product_id : FK
+  time_id : FK
+  quantity : INTEGER
+  total_amount : DECIMAL
   payment_status : VARCHAR
   payment_method : VARCHAR
-  total_amount : DECIMAL
 }
 
-"Product" ||--o{ "FactSales" : "is sold"
-"Users" ||--o{ "FactSales" : "makes purchase"
-"Time" ||--o{ "FactSales" : "occurs at"
-"Time" ||--o{ "Users" : "joined on"
-"Customer" ||--o{ "FactSales" : "referenced as"
+users    ||--o{ fact_sales : makes_purchase
+products ||--o{ fact_sales : sold_in
+time     ||--o{ fact_sales : occurs_on
+time     ||--o{ users      : signed_up_on
 
 @enduml
