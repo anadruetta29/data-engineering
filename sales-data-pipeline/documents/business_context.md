@@ -1,5 +1,4 @@
-## Contexto
-La empresa vende productos online y utiliza un proveedor externo
-para procesar pagos.
+## Context
+The company sells products online and uses a third-party provider to process payments.
 
-El análisis financiero debe considerar solo ventas con pagos exitosos.
+Financial analysis must only consider sales with successful payments.

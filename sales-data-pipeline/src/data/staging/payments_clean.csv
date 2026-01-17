@@ -1,0 +1,9 @@
+payment_id,sale_id,status,payment_method,amount,payment_date
+pay_001,sale_001,approved,credit_card,120.5,2024-01-10 15:20:00+00:00
+pay_002,sale_002,approved,debit_card,75.0,2024-01-10 16:05:00+00:00
+pay_003,sale_003,approved,paypal,210.0,2024-01-11 11:42:00+00:00
+pay_005,sale_005,approved,bank_transfer,240.0,2024-01-12 10:30:00+00:00
+pay_007,sale_007,approved,debit_card,280.0,2024-01-13 12:15:00+00:00
+pay_008,sale_008,approved,credit_card,200.0,2024-01-13 17:40:00+00:00
+pay_009,sale_009,approved,paypal,180.75,2024-01-14 09:25:00+00:00
+pay_010,sale_010,approved,bank_transfer,120.0,2024-01-14 13:50:00+00:00
