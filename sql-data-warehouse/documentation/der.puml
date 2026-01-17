@@ -1,0 +1,57 @@
+@startuml
+
+title Star Schema: Sales Entity-Relationship Diagram
+
+entity "Customer" {
+  * customer_id : PK
+  --
+  name : VARCHAR
+  country : VARCHAR
+  segment : VARCHAR
+}
+
+entity "Product" {
+  * product_id : PK
+  --
+  product_name : VARCHAR
+  category : VARCHAR
+  price : DECIMAL
+}
+
+entity "Time" {
+  * time_id : PK
+  --
+  date : DATE
+  year : INTEGER
+  month : INTEGER
+  day : INTEGER
+}
+
+entity "Users" {
+    * user_id : PK
+    --
+    email : STRING
+    country : STRING
+    signup_date_id : FK
+    is_active : BOOLEAN
+}
+
+entity "FactSales" {
+  * sale_id : PK
+  --
+  * product_id : FK
+  * user_id : FK
+  * time_id : FK
+  country : VARCHAR
+  payment_status : VARCHAR
+  payment_method : VARCHAR
+  total_amount : DECIMAL
+}
+
+"Product" ||--o{ "FactSales" : "is sold"
+"Users" ||--o{ "FactSales" : "makes purchase"
+"Time" ||--o{ "FactSales" : "occurs at"
+"Time" ||--o{ "Users" : "joined on"
+"Customer" ||--o{ "FactSales" : "referenced as"
+
+@enduml
