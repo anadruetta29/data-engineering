@@ -1,27 +1,22 @@
-# data-engineering
-Data Engineering roadmap with hands-on projects based on real business use cases, covering ETL, SQL, analytics, and modern data stacks.
+# Data Engineering Roadmap
+Hands-on projects based on real business use cases, covering ETL, SQL, analytics, and modern data stacks.
+This repository documents my learning journey in Data Engineering, ranging from business fundamentals to building end-to-end pipelines using modern tools within the data ecosystem.
 
-Este repositorio documenta mi recorrido de aprendizaje en Ingeniería de Datos,
-abarcando desde fundamentos de negocio hasta la construcción de pipelines
-end-to-end utilizando herramientas modernas del ecosistema de datos.
-
-## Objetivo
-Desarrollar habilidades prácticas en Data Engineering mediante proyectos
-basados en problemas reales de negocio.
+## Objective
+To develop practical Data Engineering skills through projects based on real-world business problems.
 
 ## Roadmap
-- Fase 0: Fundamentos de datos y negocio
-- Fase 1: Excel para análisis
-- Fase 2: SQL avanzado
-- Fase 3: ETL con Python
-- Fase 4: Visualización con Power BI
-- Fase 5: Data Warehousing
-- Fase 6: Big Data y Cloud
-- Fase 7: Proyecto final end-to-end
+- Phase 0: Data & Business Fundamentals
+- Phase 1: Excel for Analytics
+- Phase 2: Advanced SQL
+- Phase 3: ETL with Python
+- Phase 4: Visualization with Power BI
+- Phase 5: Data Warehousing
+- Phase 6: Big Data & Cloud
+- Phase 7: Final End-to-End Project
 
-## Tecnologías
+## Technologies
 Python · SQL · PostgreSQL · Excel · Power BI · Spark · Cloud
 
-## Enfoque
-Todos los proyectos están basados en casos reales y documentados
-como si fueran soluciones empresariales.
+## Approach
+All projects are based on real-world scenarios and documented as professional enterprise solutions.
