@@ -40,13 +40,23 @@ Sales by country
 - PostgreSQL
 
 ## Known Issues & Learnings
-During development, some time-based measures (Sales YTD, Sales YoY %, Sales MoM %) initially 
-returned blank values. This behavior was expected and helped reinforce key Power BI concepts:
-- Time intelligence functions require a dedicated Date table that is properly marked as a Date table.
-- Measures must use the date column from the date dimension (dim_date[Date]) rather than dates from 
-the fact table.
-- Time-based calculations require an active time context (e.g., year or month filters). 
-Without a selected time period, Power BI returns BLANK() by design.
-- Year-over-Year and Month-over-Month measures return blank values when no data exists for the 
-previous period, which is correct behavior.
-- Resolving these issues ensured accurate time intelligence calculations and a robust analytical model.
+During development, some time-based measures (Sales YTD, Sales YoY %, Sales MoM %) 
+initially returned blank or zero values. This issue was traced to a data modeling problem and 
+provided important learning outcomes:
+
+- The time_id column in the fact_sales table was stored as an integer (YYYYMMDD) instead of a proper 
+Date data type.
+
+- Power BI time intelligence functions do not work with numeric date representations, 
+even if they visually resemble dates.
+
+- The issue was resolved by creating a calculated Date column from the integer time_id and using it
+to relate the fact table to a dedicated date dimension (dim_date).
+
+- Time intelligence functions require: a properly formatted Date column, a Date dimension marked as a 
+Date table and relationships based on actual Date data types
+
+- Year-over-Year and Month-over-Month measures correctly return blank or zero values when no 
+historical data exists for the previous period, which is expected and correct behavior.
+
+Resolving these issues ensured accurate time-based calculations and reinforced best practices in data modeling, time intelligence, and analytical design.
