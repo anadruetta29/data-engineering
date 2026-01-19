@@ -218,3 +218,5 @@ data/processed/*
 .env
 __pycache__/
 *.pyc
+
+utils/db.py
