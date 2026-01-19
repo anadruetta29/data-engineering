@@ -1,0 +1,11 @@
+user_id,email,country,signup_date,is_active
+user_01,ana.garcia@email.com,Argentina,"miércoles, 15 de marzo de 2023",True
+user_02,juan.perez@email.com,Uruguay,"lunes, 22 de mayo de 2023",True
+user_03,maria.lopez@email.com,Chile,"lunes, 10 de julio de 2023",True
+user_04,carlos.silva@email.com,Brasil,"martes, 1 de agosto de 2023",True
+user_05,sofia.martinez@email.com,Argentina,"lunes, 18 de septiembre de 2023",True
+user_06,diego.rojas@email.com,Chile,"jueves, 5 de octubre de 2023",True
+user_07,laura.gomez@email.com,Argentina,"domingo, 12 de noviembre de 2023",True
+user_08,pedro.alvarez@email.com,Brasil,"viernes, 1 de diciembre de 2023",False
+user_09,camila.fernandez@email.com,Uruguay,"viernes, 5 de enero de 2024",True
+user_10,matias.sanchez@email.com,Argentina,"sábado, 20 de enero de 2024",True
