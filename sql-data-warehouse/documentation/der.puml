@@ -1,0 +1,36 @@
+@startuml
+title Star Schema: Sales Data Warehouse
+
+entity "users" {
+    * user_id : PK
+    --
+    email : VARCHAR
+    country : VARCHAR
+    signup_date_id : FK
+    is_active : BOOLEAN
+}
+
+entity "products" {
+  * product_id : PK
+  --
+  product_name : VARCHAR
+  category : VARCHAR
+  price : DECIMAL
+}
+
+entity "fact_sales" {
+  * sale_id : PK
+  --
+  user_id : FK
+  product_id : FK
+  time_id : FK
+  quantity : INTEGER
+  total_amount : DECIMAL
+  payment_status : VARCHAR
+  payment_method : VARCHAR
+}
+
+users    ||--o{ fact_sales : makes_purchase
+products ||--o{ fact_sales : sold_in
+
+@enduml

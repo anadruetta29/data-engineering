@@ -34,7 +34,7 @@ def load_payments_raw(df: pd.DataFrame):
             """)
             connection.execute(delete_query, {"payment_dates": payment_dates})
 
-        df.to_sql("payments_raw", connection, if_exists="append", index=False)
+        df.to_sql("payments_raw", connection, if_exists="replace", index=False)
 
     print(f"Loaded {len(df)} records into payments_raw")
 
