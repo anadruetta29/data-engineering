@@ -49,3 +49,5 @@ Ensure no missing references
 
 Earlier, fact_sales was empty because the date_sk join was incorrect. 
 Resolved by matching staging.dim_sales.time_id to dim_date.full_date with proper format conversion.
+
+Also, the transform.py script will be improved in the future for better performance.  
