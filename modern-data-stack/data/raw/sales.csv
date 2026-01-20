@@ -1,0 +1,8 @@
+sale_id,user_id,product_id,time_id,quantity,total_amount,payment_status,payment_method,sale_date
+sale_001,user_01,prod_01,20240110,1,1200,approved,credit_card,10/1/2024 00:00:00
+sale_002,user_02,prod_02,20240110,2,50,approved,debit_card,10/1/2024 00:00:00
+sale_003,user_03,prod_03,20240111,1,350,approved,paypal,11/1/2024 00:00:00
+sale_004,user_01,prod_04,20240112,1,180,approved,bank_transfer,12/1/2024 00:00:00
+sale_005,user_07,prod_05,20240113,3,135,approved,credit_card,13/1/2024 00:00:00
+sale_006,user_02,prod_01,20240114,1,1200,approved,paypal,14/1/2024 00:00:00
+sale_007,user_06,prod_03,20240113,1,350,rejected,debit_card,13/1/2024 00:00:00
