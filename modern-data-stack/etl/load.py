@@ -24,7 +24,8 @@ def load_fact_sales():
     FROM staging.dim_sales s
     JOIN warehouse.dim_users du ON s.user_id = du.user_id
     JOIN warehouse.dim_products dp ON s.product_id = dp.product_id
-    JOIN warehouse.dim_date dd ON CAST(s.time_id AS TEXT) = CAST(dd.date_sk AS TEXT)
+    JOIN warehouse.dim_date dd 
+    ON dd.full_date = TO_DATE(CAST(s.time_id AS TEXT), 'YYYYMMDD')
     ON CONFLICT (sale_id) DO NOTHING;
     """
 
